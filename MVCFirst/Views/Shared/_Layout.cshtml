@@ -26,7 +26,8 @@
                     <a asp-action="Nya" asp.controllers="Home">Nya</a>
                 </li>
                 <li>
-                    @Html.ActionLink("Demo Page", "Index","Demo")
+                    <i class="fa-solid fa-globe"></i>
+                    @Html.ActionLink("Language", "Index","Demo")
                 </li>
             </ul>
         </nav>
@@ -42,7 +43,6 @@
 
         <span>@currentDateTimeUTC &copy; DeadlyScarab</span>
     </footer>
-    <script type="text/javascript" src="/js/JavaScript.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
