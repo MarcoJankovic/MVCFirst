@@ -10,8 +10,6 @@ namespace MVCFirst.Controllers
             return View();
         }
 
-        [HttpPost]
-
         public IActionResult PreferdLanguageCookie()
         {
             string? language = Request.Cookies["PrefLang"];// Read Cookie
