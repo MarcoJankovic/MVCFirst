@@ -39,9 +39,67 @@ nav {
             }
 
 
-.content {
-    color:white;
+a {
+    font-family: Monaco;
+    font-size: 1.3rem;
 }
+
+a:active {
+    color: red;
+}
+
+    .content {
+        color: white;
+        text-align: center;
+    }
+
+
+.hero {
+    display: flex;
+    justify-content: left;
+    margin-top: 150px;
+    margin-left: 10px;
+    color: white;
+    background-color: rgba(37, 38, 37, 0.404);
+}
+
+.left {
+    flex: 2;
+}
+
+.middle {
+    flex: 2;
+}
+
+.right {
+    flex: 2;
+}
+
+.hero > div > h3 {
+    font-size: 1.7rem;
+    color: red;
+    border-bottom: 1px black solid;
+}
+
+.hero > div > ul  {
+    margin-top: 15px;
+}
+
+.hero > div > ul > li {
+    padding:2px;
+    list-style: none;
+}
+
+    .hero > div > ul > li > a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .hero > div > ul > li > a:hover {
+        background: green;
+        cursor: pointer;
+    }
+
 
 
 footer {

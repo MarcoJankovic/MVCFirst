@@ -10,11 +10,6 @@ namespace MVCFirst.Controllers
             return View();
         }
 
-        public IActionResult New()
-        {
-            return View();
-        }
-
         [HttpPost]
 
         public IActionResult PreferdLanguageCookie()

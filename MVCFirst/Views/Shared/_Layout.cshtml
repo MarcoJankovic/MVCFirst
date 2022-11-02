@@ -4,7 +4,9 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/Style.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -12,22 +14,19 @@
         <nav class="navigation">
             <ul>
                 <li>
-                    <a asp-action="Index" asp-controller="Home">Home</a>
+                    <a asp-action="Index" asp-controller="Home"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
                 </li>
                 <li>
-                    <a asp-action="Contact" asp-controller="Home">Contact</a>
+                    <a asp-action="Contact" asp-controller="Home"><i class="fa-solid fa-address-card"></i> Contact</a>
                 </li>
                 <li>
-                    <a asp-action="Projects" asp-controller="Home">Projects</a>
+                    <a asp-action="Projects" asp-controller="Home"><i class="fa-solid fa-skull"></i> Projects</a>
                 </li>
                 <li>
                     <a asp-action="Nya" asp.controllers="Home">Nya</a>
                 </li>
                 <li>
                     @Html.ActionLink("Demo Page", "Index","Demo")
-                </li>
-                <li>
-                    @Html.ActionLink("New", "New", "Demo")
                 </li>
             </ul>
         </nav>
@@ -37,11 +36,11 @@
     </div>
     <footer>
 
-        @{    
-            DateTime now = DateTime.Now;
+        @{
+            DateTime currentDateTimeUTC = DateTime.UtcNow;
         }
 
-        <span>@now &copy; DeadlyScarab</span>
+        <span>@currentDateTimeUTC &copy; DeadlyScarab</span>
     </footer>
     <script type="text/javascript" src="/js/JavaScript.js"></script>
     @RenderSection("scripts", required: false)
