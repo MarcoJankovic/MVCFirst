@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h3 class="logo">MVC-First-Project</h3>
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a asp-action="Index" asp-controller="Home">Home</a>
+                </li>
+                <li>
+                    <a asp-action="Contact" asp-controller="Home">Contact</a>
+                </li>
+                <li>
+                    <a asp-action="Projects" asp-controller="Home">Projects</a>
+                </li>
+                <li>
+                    <a asp-action="Nya" asp.controllers="Home">Nya</a>
+                </li>
+                <li>
+                    @Html.ActionLink("Demo Page", "Index","Demo")
+                </li>
+                <li>
+                    @Html.ActionLink("New", "New", "Demo")
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        @RenderBody()
+    </div>
+    <footer>
+
+        @{    
+            DateTime now = DateTime.Now;
+        }
+
+        <span>@now &copy; DeadlyScarab</span>
+    </footer>
+    <script type="text/javascript" src="/js/JavaScript.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
