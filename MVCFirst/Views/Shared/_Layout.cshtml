@@ -41,13 +41,8 @@
     <div class="content">
         @RenderBody()
     </div>
-    <footer>
-
-        @{
-            DateTime currentDateTimeUTC = DateTime.UtcNow;
-        }
-
-        <span>@currentDateTimeUTC &copy; DeadlyScarab</span>
+    <footer>      
+        <span>@DateTime.Now.Year; &copy; DeadlyScarab</span>
     </footer>
     @RenderSection("scripts", required: false)
 </body>
