@@ -2868,7 +2868,8 @@ readers do not read off random characters that represent icons */
   content: "\f0b0"; }
 
 .fa-question::before {
-  content: "\3f"; }
+  content: "\3f";
+}
 
 .fa-file-signature::before {
   content: "\f573"; }

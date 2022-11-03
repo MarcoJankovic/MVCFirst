@@ -38,9 +38,9 @@ nav {
                 color: white;
             }
 
-.fa-globe:before {
-    color: white;
-}
+            nav > ul > li > a > i  {
+                color: white;
+            }
 
 a {
     font-family: Monaco;

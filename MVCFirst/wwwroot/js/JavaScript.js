@@ -2,7 +2,7 @@
     context = canvas.getContext('2d');
 context.globalCompositeOperation = 'lighter';
 canvas.width = 500;
-canvas.height = 850;
+canvas.height = 2000;
 canvas.index = 10;
 draw();
 
