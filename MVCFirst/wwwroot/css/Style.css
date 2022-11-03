@@ -5,6 +5,8 @@
 
 body {
     background-image: url("/Img/2948686.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -38,9 +40,9 @@ nav {
                 color: white;
             }
 
-            nav > ul > li > a > i  {
-                color: white;
-            }
+                nav > ul > li > a > i {
+                    color: white;
+                }
 
 a {
     font-family: Monaco;
@@ -51,11 +53,69 @@ a {
         color: red;
     }
 
+.fa-briefcase-medical {
+    color: red;
+}
+
 .content {
     color: white;
     text-align: center;
 }
 
+.container {
+    display: flex;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drform {
+    width: 100%;
+}
+
+
+.drinput ,select, textarea {
+    color: red;
+    font-size: 18px;
+}
+
+    .drinput::placeholder {
+        color: white;
+        font-size: 18px;
+    }
+
+.drinput {
+    width: 400px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    background: #262626;
+    border: 1px solid black;
+}
+
+.drbutton {
+    height: 50px;
+    width: 100px;
+    color: red;
+    background: #262626;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.drform > p {
+    font-size: 40px;
+}
+
+.fa-temperature-low{
+    font-size:28px;
+    color:red;
+}
 
 .hero {
     display: flex;
@@ -63,7 +123,7 @@ a {
     margin-top: 150px;
     margin-left: 10px;
     color: white;
-    background-color: rgba(37, 38, 37, 0.404);
+    background-color: rgba(37, 38, 37, 0.704);
 }
 
 .left {
@@ -114,12 +174,9 @@ footer {
     background: #191919 !important;
 }
 
-.scrollBox{
-    height:900px;
+.scrollBox {
+    height: 900px;
 }
-
-
-
 
 
 
