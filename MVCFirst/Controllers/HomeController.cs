@@ -18,10 +18,5 @@ namespace MVCFirst.Controllers
         {
             return View();
         }
-
-        public IActionResult Nya()
-        {
-            return View();
-        }
     }
 }
