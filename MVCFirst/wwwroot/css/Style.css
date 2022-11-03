@@ -39,7 +39,7 @@ nav {
             }
 
 .fa-globe:before {
-    color:white;
+    color: white;
 }
 
 a {
@@ -47,14 +47,14 @@ a {
     font-size: 1.3rem;
 }
 
-a:active {
-    color: red;
-}
-
-    .content {
-        color: white;
-        text-align: center;
+    a:active {
+        color: red;
     }
+
+.content {
+    color: white;
+    text-align: center;
+}
 
 
 .hero {
@@ -84,24 +84,24 @@ a:active {
     border-bottom: 1px black solid;
 }
 
-.hero > div > ul  {
+.hero > div > ul {
     margin-top: 15px;
 }
 
-.hero > div > ul > li {
-    padding:2px;
-    list-style: none;
-}
-
-    .hero > div > ul > li > a {
-        text-decoration: none;
-        color: white;
+    .hero > div > ul > li {
+        padding: 2px;
+        list-style: none;
     }
 
-    .hero > div > ul > li > a:hover {
-        background: green;
-        cursor: pointer;
-    }
+        .hero > div > ul > li > a {
+            text-decoration: none;
+            color: white;
+        }
+
+            .hero > div > ul > li > a:hover {
+                background: green;
+                cursor: pointer;
+            }
 
 
 
