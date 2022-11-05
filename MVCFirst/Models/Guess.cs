@@ -2,16 +2,35 @@
 {
     public class Guess
     {
-        public static string deRandom()
+        public static string RandomNum(int guess, bool go)
         {
             Random random = new Random();
 
-            for(int j = 0; j <4; j++)
+            int rnd = random.Next(1, 101);
+            int count = 0;
+
+            guess = Convert.ToInt32(guess);
+
+            do
             {
-                var rnd = random.Next(1, 101);     
+                if (guess < rnd)
+                {
+                    count++;
+                    return "Your guess " + guess + " was to low\n " + " Current Guesses: " + count + " Random nr: " + rnd;
+                }
+                else if (guess > rnd)
+                {
+                    count++;
+                    return "Your guess " + guess + " was to high\n " + " Current Guesses: " + count;
+                }
+                else if (guess == rnd)
+                {
+                    return "Your guess was correct! " + guess + " Your guess was same as random number! " + rnd + "Amount of guesses: " + count;
+                }
+
             }
-            
-            return "";
+            while (!go);
+            return "-";
         }
     }
 }

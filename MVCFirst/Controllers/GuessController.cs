@@ -5,22 +5,22 @@ namespace MVCFirst.Controllers
     public class GuessController : Controller
     {
         [HttpPost]
-        public IActionResult Random(int number, int random)
+        public IActionResult GuessCheck(int guess, bool go)
         {
-            if (number != random)
+            if (guess != 0)
             {
-                ViewBag.Msg = Models.Guess.deRandom();
+                ViewBag.Msg = Models.Guess.RandomNum(guess, go);
                 return View();
             }
             else
             {
-                ViewBag.Msg = "Enter a number please!";
+                ViewBag.Msg = "Provide a number!";
                 return View();
             }
         }
 
         [HttpGet]
-        public IActionResult Random()
+        public IActionResult GuessCheck()
         {
             return View();
         }

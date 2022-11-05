@@ -8,42 +8,42 @@
     @section styles{
         <link rel="Stylesheet" href="@Href("~/Content/MyStyles.css")" />
     }
-    <link href="~/css/Style.css" rel="stylesheet" />
-    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
-    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
-</head>
-<body>
-    <header>
-        <h3 class="logo">MVC-First-Project</h3>
-        <nav class="navigation">
-            <ul>
-                <li>
-                    <a asp-action="Index" asp-controller="Home"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
-                </li>
-                <li>
-                    <a asp-action="Contact" asp-controller="Home"><i class="fa-solid fa-address-card"></i> Contact</a>
-                </li>
-                <li>
-                        <a asp-action="About" asp-controller="Home"><i class="fa-solid fa-question"></i>About Us</a>
-                </li>
-                <li>
-                    <a asp-action="Projects" asp-controller="Home"><i class="fa-solid fa-skull"></i> Projects</a>
-                </li>
-                <li>
-                    <a asp-action="FeverCheck" asp-controller="Doctor"><i class="fa-solid fa-briefcase-medical"></i> Doctor</a>
-                </li>
+        <link href="~/css/Style.css" rel="stylesheet" />
+        <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+        <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h3 class="logo">MVC-First-Project</h3>
+            <nav class="navigation">
+                <ul>
                     <li>
-                        <a asp-action="Random" asp-controller="Guess"><i class="fa-solid fa-question"></i> Random</a>
+                        <a asp-action="Index" asp-controller="Home"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
                     </li>
-                <li>
-                    <a asp-action="PreferdLanguageCookie" asp-controller="Demo"><i class="fa-solid fa-globe"></i> Language</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="content">
-        @RenderBody()
-    </div>
-    @RenderSection("scripts", required: false)
-</body>
-</html>
+                    <li>
+                        <a asp-action="Contact" asp-controller="Home"><i class="fa-solid fa-address-card"></i> Contact</a>
+                    </li>
+                    <li>
+                        <a asp-action="About" asp-controller="Home"><i class="fa-solid fa-question"></i>About Us</a>
+                    </li>
+                    <li>
+                        <a asp-action="Projects" asp-controller="Home"><i class="fa-solid fa-skull"></i> Projects</a>
+                    </li>
+                    <li>
+                        <a asp-action="FeverCheck" asp-controller="Doctor"><i class="fa-solid fa-briefcase-medical"></i> Doctor</a>
+                    </li>
+                    <li>
+                        <a asp-action="GuessCheck" asp-controller="Guess"><i class="fa-solid fa-question"></i> Random</a>
+                    </li>
+                    <li>
+                        <a asp-action="PreferdLanguageCookie" asp-controller="Demo"><i class="fa-solid fa-globe"></i> Language</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            @RenderBody()
+        </div>
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>

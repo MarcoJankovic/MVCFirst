@@ -10,7 +10,7 @@
                 }
                 else if (temp >= 36 && temp <= 38)
                 {
-                    return " You should get some rest!" ;
+                    return " You should get some rest!";
                 }
                 else if (temp < 36)
                 {

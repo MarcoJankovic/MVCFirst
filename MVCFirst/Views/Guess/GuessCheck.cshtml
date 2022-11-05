@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "GuessCheck";
+}
+
+<h1>Guess Random</h1>
+
+<div class="container">
+    <form asp-action="GuessCheck" asp-controller="Guess" class="drform" method="post">
+        <input class="drinput" type="number" placeholder="Enter Number" name="guess" value="" min="0" max="100" step="1" />
+        <button type="submit" class="drbutton"><i class="fa-solid fa-question"></i></button>
+        <p>
+            @if (ViewBag.Msg != null)
+            {
+                @ViewBag.Msg
+            }
+        </p>
+    </form>
+</div>
