@@ -9,8 +9,6 @@
             int rnd = random.Next(1, 101);
             int count = 0;
 
-            guess = Convert.ToInt32(guess);
-
             do
             {
                 if (guess < rnd)
@@ -25,7 +23,8 @@
                 }
                 else if (guess == rnd)
                 {
-                    return "Your guess was correct! " + guess + " Your guess was same as random number! " + rnd + "Amount of guesses: " + count;
+                   
+                    return "Your guess was correct! " + guess + " Your guess was same as random number! " + rnd + " Amount of guesses: " + count;
                 }
 
             }
