@@ -44,6 +44,9 @@
         <div class="content">
             @RenderBody()
         </div>
+        <footer>
+            <span>@DateTime.Now.ToString("yyyy-MM-dd") &copy; DeadlyScarab</span>
+        </footer>
         @RenderSection("scripts", required: false)
     </body>
     </html>
