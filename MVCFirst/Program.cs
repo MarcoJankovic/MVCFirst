@@ -10,6 +10,7 @@ namespace MVCFirst
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddMvc();
+            builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddSession(options =>
             {

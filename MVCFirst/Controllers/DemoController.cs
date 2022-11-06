@@ -20,7 +20,7 @@ namespace MVCFirst.Controllers
             }
             return View();
         }
-    
+
         public IActionResult SetLanguageCookie(string lang)
         {
             if (!string.IsNullOrEmpty(lang))
@@ -31,6 +31,6 @@ namespace MVCFirst.Controllers
             }
             return RedirectToAction(nameof(PreferdLanguageCookie));
         }
-            
+
     }
 }

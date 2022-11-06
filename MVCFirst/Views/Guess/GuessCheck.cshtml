@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
+@model MVCFirst.Models.Message
+@{
     ViewData["Title"] = "GuessCheck";
 }
 
@@ -9,10 +12,10 @@
         <input class="drinput" type="number" placeholder="Enter Number" name="guess" value="" min="0" max="100" step="1" />
         <button type="submit" class="drbutton"><i class="fa-solid fa-question"></i></button>
         <p>
-            @if (ViewBag.Msg != null)
-            {
-                @ViewBag.Msg
-            }
+            @Accessor.HttpContext.Session.GetString("model")
+        </p>
+        <p>
+            @Model.Value
         </p>
     </form>
 </div>

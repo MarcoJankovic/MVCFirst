@@ -1,28 +1,55 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using MVCFirst.Models;
+
 
 namespace MVCFirst.Controllers
 {
     public class GuessController : Controller
     {
-        [HttpPost]
-        public IActionResult GuessCheck(int guess, bool go)
+        private readonly IHttpContextAccessor _HttpContextAccessor;
+        public GuessController(IHttpContextAccessor httpContextAccessor) // Dependency Injection
         {
-            if (guess != 0)
-            {
-                ViewBag.Msg = Models.Guess.RandomNum(guess, go);
-                return View();
-            }
-            else
-            {
-                ViewBag.Msg = "Provide a number!";
-                return View();
-            }
+            _HttpContextAccessor = httpContextAccessor;
         }
 
         [HttpGet]
         public IActionResult GuessCheck()
         {
-            return View();
+            var number = HttpContext.Session.GetString("model");
+            if (number == null)
+            {
+                var model = new Guess();
+                model.RandomNum();
+
+                HttpContext.Session.SetString("model", model.Number.ToString());
+            }
+
+            return View(new Message());
+        }
+
+        [HttpPost]
+        public IActionResult GuessCheck(int guess)
+        {
+            var session = HttpContext.Session.GetString("model");
+            if (session == null)
+            {
+                return View(new Message() { Value = Messages.TheGuess });
+            }
+
+            var number = Convert.ToInt32(session);
+            if (guess > number)
+            {
+                return View(new Message() { Value = Messages.IsGreaterThan });
+            }
+            else if (guess < number)
+            {
+                return View(new Message() { Value = Messages.IsLowerThan });
+            }
+            else
+            {
+                return View(new Message() { Value = Messages.IsEqual });
+            }
         }
     }
 }
